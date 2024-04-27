@@ -1,0 +1,163 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Stand script",
+    LoadingTitle = "XK5NG interface suite",
+    LoadingSubtitle = "by XK5NG",
+    ConfigurationSaving = {
+       Enabled = false,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "Big Hub"
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = false, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Sirius Hub",
+       Subtitle = "Key System",
+       Note = "Join the discord (discord.gg/sirius)",
+       FileName = "SiriusKey",
+       SaveKey = true,
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = "Hello"
+    }
+ })
+
+ Window:Prompt({
+	Title = 'Notice',
+	SubTitle = 'Credits',
+	Content = 'Script was made by XK5NG, gui was made by coquette',
+	Actions = {
+		Accept = {
+			Name = 'Okay!',
+			Callback = function()
+                print("alright")
+			end,
+		}
+	}
+})
+
+ local Tab = Window:CreateTab("Stand Settings", 4483362458) -- Title, Image
+
+ local Section = Tab:CreateSection("Owner/Username",false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+
+ Tab:CreateInput({
+    Name = "Owner",
+    Info = "Make sure to enter the right name.", -- Speaks for itself, Remove if none.
+    PlaceholderText = "..",
+    NumbersOnly = false, -- If the user can only type numbers. Remove if none.
+    OnEnter = true, -- Will callback only if the user pressed ENTER while the box is focused.
+    RemoveTextAfterFocusLost = false,
+    SectionParent = Section,
+    Callback = function(Text)
+    -- The function that takes place when the input is changed
+    -- The variable (Text) is a string for the value in the text box
+    end,
+ })
+
+ Tab:CreateInput({
+    Name = "Stand",
+    Info = "Make sure to enter the right name.", -- Speaks for itself, Remove if none.
+    PlaceholderText = "..",
+    NumbersOnly = false, -- If the user can only type numbers. Remove if none.
+    OnEnter = true, -- Will callback only if the user pressed ENTER while the box is focused.
+    RemoveTextAfterFocusLost = false,
+    SectionParent = Section,
+    Callback = function(Text)
+    -- The function that takes place when the input is changed
+    -- The variable (Text) is a string for the value in the text box
+    end,
+ })
+
+    Tab:CreateButton({
+    Name = "Execute",
+    Info = "Loads the stand with the settings.", -- Speaks for itself, Remove if none.
+    Interact = 'Changable',
+    SectionParent = Section,
+    Callback = function()
+    -- The function that takes place when the button is pressed
+    end,
+ })
+
+ local Section2 = Tab:CreateSection("Basic settings",false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+
+Tab:CreateDropdown({
+    Name = "Position",
+    Options = {"Back","Left","Right"},
+    CurrentOption = "Back",
+    MultiSelection = true, -- If MultiSelections is allowed
+    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    SectionParent = Section2,
+    Callback = function(Option)
+    -- The function that takes place when the selected option is changed
+    -- The variable (Option) is a string for the value that the dropdown was changed to
+    end,
+ })
+
+ Tab:CreateDropdown({
+    Name = "Fly Mode",
+    Options = {"Hover","Heaven","Glide","FlyV1","FlyV2"},
+    CurrentOption = "Glide",
+    MultiSelection = true, -- If MultiSelections is allowed
+    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    SectionParent = Section2,
+    Callback = function(Option)
+    -- The function that takes place when the selected option is changed
+    -- The variable (Option) is a string for the value that the dropdown was changed to
+    end,
+ })
+
+
+ Tab:CreateToggle({
+    Name = "Low Graphics",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    SectionParent = Section2
+    Callback = function(Value)
+    -- The function that takes place when the toggle is pressed
+    -- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+ })
+
+ 
+ Tab:CreateToggle({
+    Name = "Fps Cap",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    SectionParent = Section2
+    Callback = function(Value)
+    -- The function that takes place when the toggle is pressed
+    -- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+ })
+
+ Tab:CreateToggle({
+    Name = "Hide Screen",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    SectionParent = Section2
+    Callback = function(Value)
+    -- The function that takes place when the toggle is pressed
+    -- The variable (Value) is a boolean on whether the toggle is true or false
+    end,
+ })
+
+ Tab:CreateInput({
+    Name = "Custom Message",
+    Info = "Default: Master", -- Speaks for itself, Remove if none.
+    PlaceholderText = "..",
+    NumbersOnly = false, -- If the user can only type numbers. Remove if none.
+    OnEnter = true, -- Will callback only if the user pressed ENTER while the box is focused.
+    RemoveTextAfterFocusLost = false,
+    SectionParent = Section2,
+    Callback = function(Text)
+    -- The function that takes place when the input is changed
+    -- The variable (Text) is a string for the value in the text box
+    end,
+ })
+
+
+-- loadstring(game:HttpGet(("https://raw.githubusercontent.com/epicdude99/ui_testing/main/test2")))()
