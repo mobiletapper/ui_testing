@@ -57,3 +57,58 @@ local Window = Rayfield:CreateWindow({
     -- The variable (Text) is a string for the value in the text box
     end,
  })
+
+ Tab:CreateInput({
+    Name = "Stand",
+    Info = "Make sure to enter the right name.", -- Speaks for itself, Remove if none.
+    PlaceholderText = "..",
+    NumbersOnly = false, -- If the user can only type numbers. Remove if none.
+    OnEnter = true, -- Will callback only if the user pressed ENTER while the box is focused.
+    RemoveTextAfterFocusLost = false,
+    SectionParent = Section,
+    Callback = function(Text)
+    -- The function that takes place when the input is changed
+    -- The variable (Text) is a string for the value in the text box
+    end,
+ })
+
+    Tab:CreateButton({
+    Name = "Execute",
+    Info = "Loads the stand with the settings.", -- Speaks for itself, Remove if none.
+    Interact = 'Changable',
+    SectionParent = Section,
+    Callback = function()
+    -- The function that takes place when the button is pressed
+    end,
+ })
+
+ local Section2 = Tab:CreateSection("Basic settings",false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+
+Tab:CreateDropdown({
+    Name = "Position",
+    Options = {"Back","Left","Right"},
+    CurrentOption = "Back",
+    MultiSelection = true, -- If MultiSelections is allowed
+    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    SectionParent = Section2,
+    Callback = function(Option)
+    -- The function that takes place when the selected option is changed
+    -- The variable (Option) is a string for the value that the dropdown was changed to
+    end,
+ })
+
+ Tab:CreateDropdown({
+    Name = "Fly Mode",
+    Options = {"Hover","Heaven","Glide","FlyV1","FlyV2"},
+    CurrentOption = "Glide",
+    MultiSelection = true, -- If MultiSelections is allowed
+    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    SectionParent = Section2,
+    Callback = function(Option)
+    -- The function that takes place when the selected option is changed
+    -- The variable (Option) is a string for the value that the dropdown was changed to
+    end,
+ })
+
+
+ loadstring(game:HttpGet(("https://raw.githubusercontent.com/epicdude99/ui_testing/main/test2")))()
