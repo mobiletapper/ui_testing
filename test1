@@ -1,0 +1,132 @@
+-- a dusty trip 
+-- a dusty trip
+repeat wait() until game:IsLoaded() -- wait until game is loaded
+
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
+
+local runservice, userinputservice, localplr, char, rootpart, mouse = 
+game:GetService("RunService")
+game:GetService("UserInputService")
+game.Players.LocalPlayer
+game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character.HumanoidRootPart
+game.Players.LocalPlayer:GetMouse()
+
+function teleport(x,y,z)
+    CFrame.new(x,y,z)
+end
+
+function notify(text,content,duration)
+    Rayfield:Notify({
+        Title = text,
+        Content = content,
+        Duration = duration
+    })
+end
+
+local adustytrip = {
+    esp = {
+        car_parts = {
+            fuel_can = nil,
+            doors = nil,
+            engines = nil,
+            wheels = nil,
+            radiators = nil,
+            lights = nil,
+            frontrear = nil,
+            backrear = nil,
+        },
+        foods = {
+            bananas = nil,
+            apples = nil,
+            breads = nil,
+            donuts = nil,
+            chocolate_bars = nil,
+            pizzas = nil,
+            garlics = nil,
+            burgers = nil,
+        },
+        weapons = {
+            mac10s = nil,
+            pistols = nil,
+            rpgs = nil,
+            ak47s = nil,
+        },
+        mobs = {
+            mutants = nil,
+            vampires = nil,
+        },
+        others = {
+            caps = nil,
+            sponges = nil,
+            flashlights = nil,
+            woodplanks = nil,
+        },
+    },
+    espcolors = {
+        fuel_can_color = Color3.fromRGB(255,255,255),
+        door_color = Color3.fromRGB(255,255,255),
+        engine_color = Color3.fromRGB(255,255,255),
+        wheel_color = Color3.fromRGB(255,255,255),
+        radiator_color = Color3.fromRGB(255,255,255),
+        light_color = Color3.fromRGB(255,255,255),
+        frontrear_color = Color3.fromRGB(255,255,255),
+        backrear_color = Color3.fromRGB(255,255,255),
+        banana_color = Color3.fromRGB(255,255,255),
+        apple_color = Color3.fromRGB(255,255,255)
+        bread_color = Color3.fromRGB(255,255,255),
+        donut_color = Color3.fromRGB(255,255,255),
+        chocolatebars_color = Color3.fromRGB(255,255,255),
+        pizza_color = Color3.fromRGB(255,255,255),
+        garlic_color = Color3.fromRGB(255,255,255),
+        burger_color = Color3.fromRGB(255,255,255),
+        mac10_color = Color3.fromRGB(255,255,255),
+        pistol_color = Color3.fromRGB(255,255,255),
+        rpg_color = Color3.fromRGB(255,255,255),
+        ak47_color = Color3.fromRGB(255,255,255),
+        mutants_color = Color3.fromRGB(255,255,255),
+        vampires_color = Color3.fromRGB(255,255,255),
+        cap_color = Color3.fromRGB(255,255,255),
+        sponge_color = Color3.fromRGB(255,255,255),
+        flashlight_color = Color3.fromRGB(255,255,255), 
+        woodplank_color = Color3.fromRGB(255,255,255),
+    },
+    misc = {
+        debug_messages = nil,
+        walkspeed = nil,
+        jumppower = nil,
+        fov = nil,
+        gravity = nil,
+        walkspeed_value = 16,
+        jumppower_value = 50,
+        fov_value = 80,
+        gravity_value = 196.2,
+    }
+}
+
+📋
+local Window = Rayfield:CreateWindow({
+   Name = "Rayfield Example Window",
+   LoadingTitle = "Rayfield Interface Suite",
+   LoadingSubtitle = "by Sirius",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "yrSS9k9Mr6", -- The Discord invite code, do not include discord.gg/
+      RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Sirius Hub",
+      Subtitle = "Key System",
+      Note = "Join the discord (discord.gg/sirius)",
+      FileName = "SiriusKey",
+      SaveKey = true,
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "Hello"
+   }
+})
