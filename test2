@@ -110,5 +110,3 @@ Tab:CreateDropdown({
     end,
  })
 
-
- loadstring(game:HttpGet(("https://raw.githubusercontent.com/epicdude99/ui_testing/main/test2")))()
