@@ -88,7 +88,7 @@ Tab:CreateDropdown({
     Name = "Position",
     Options = {"Back","Left","Right"},
     CurrentOption = "Back",
-    MultiSelection = true, -- If MultiSelections is allowed
+    MultiSelection = false, -- If MultiSelections is allowed
     Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     SectionParent = Section2,
     Callback = function(Option)
@@ -101,7 +101,7 @@ Tab:CreateDropdown({
     Name = "Fly Mode",
     Options = {"Hover","Heaven","Glide","FlyV1","FlyV2"},
     CurrentOption = "Glide",
-    MultiSelection = true, -- If MultiSelections is allowed
+    MultiSelection = false, -- If MultiSelections is allowed
     Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     SectionParent = Section2,
     Callback = function(Option)
