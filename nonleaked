@@ -46,7 +46,7 @@ local Library = {
         DarkContrast = Color3.fromHex("#191432"),
         Text = Color3.fromHex("#c8c8ff"),
         TextInactive = Color3.fromHex("#afafaf"),
-        Font = Drawing.Fonts.Code,
+        Font = Drawing.Fonts.Plex,
         TextSize = 13,
         UseOutline = true
     },
@@ -78,7 +78,7 @@ local Utility = {}
 --
 getgenv().Library = Library
 getgenv().Utility = Utility
-
+syn.protect_gui(InputGUI)
 -----------------------------------------------------------------
 do
     Utility.AddInstance = function(NewInstance, Properties)
@@ -259,7 +259,7 @@ do
         --
         local Cursor = Utility.AddDrawing("Triangle", {
             Color = Library.Theme.Accent[1],
-            Thickness = 1.5,
+            Thickness = 3,
             Filled = true,
             Transparency = 1,
             ZIndex = 5
@@ -367,7 +367,7 @@ do
             Max = 2, Current = 0
         }
         --
-        Library.Theme.Logo = Utility.AddImage("akiri/Assets/UI/Logo2.png", "rbxassetid://17805464721")
+        Library.Theme.Logo = Utility.AddImage("akiri/Assets/UI/Logo2.png", "https://i.imgur.com/LbR3IoH.png")
         --
         local WindowOutline = Utility.AddDrawing("Square", {
             Size = WindowSize,
@@ -475,7 +475,7 @@ do
             Rounding = 5,
             Transparency = 1, 
             Visible = true,
-            Data = Library.Theme.Logo
+            Data = "rbxassetid://17805464721"
         })
         --
         MiddleIcon.Position = Vector2.new(WindowOutline.Position.X + (WindowOutline.Size.X / 2) - (MiddleIcon.Size.X / 2), WindowOutline.Position.Y + (WindowOutline.Size.Y / 2) - (MiddleIcon.Size.Y / 2) - 15)
@@ -520,7 +520,7 @@ do
         Window.SetText(1, "Checking Assets")
         --
         Window.SetText(1, "Checking Input")
-        task.wait(2)
+        Utility.CLCheck(Window)
         --
         Window.SetText(2, "Finished")
         --
@@ -4633,5 +4633,6 @@ do
 
         return Window
     end
-    return Library
 end
+
+return Library
