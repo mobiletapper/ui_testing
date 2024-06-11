@@ -259,7 +259,7 @@ do
         --
         local Cursor = Utility.AddDrawing("Triangle", {
             Color = Library.Theme.Accent[1],
-            Thickness = 3,
+            Thickness = 1.5,
             Filled = true,
             Transparency = 1,
             ZIndex = 5
@@ -367,7 +367,7 @@ do
             Max = 2, Current = 0
         }
         --
-        Library.Theme.Logo = Utility.AddImage("akiri/Assets/UI/Logo2.png", "https://i.imgur.com/a/SE0RUzd")
+        Library.Theme.Logo = Utility.AddImage("akiri/Assets/UI/Logo2.png", "rbxassetid://17805464721")
         --
         local WindowOutline = Utility.AddDrawing("Square", {
             Size = WindowSize,
