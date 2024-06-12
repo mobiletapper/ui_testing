@@ -495,7 +495,7 @@ do
         Utility.AddFolder("akiri/Assets/UI")
         Utility.AddFolder("akiri/Configs")
         Utility.AddFolder("akiri/Scripts")
-        Window.SetText(0, "UI Initilazitation [ "..identifyexecutor().." ]"
+        Window.SetText(0, "UI Initilazitation [ "..identifyexecutor().." ]")
         --
         Library.Theme.Gradient = Utility.AddImage("akiri/Assets/UI/Gradient.png", "https://raw.githubusercontent.com/mvonwalk/Exterium/main/Gradient.png")
         -- Library.Theme.SecondIcon = Utility.AddImage("akiri/Assets/UI/Gradient.png", "https://raw.githubusercontent.com/mvonwalk/Exterium/main/Gradient.png")
