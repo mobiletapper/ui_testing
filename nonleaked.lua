@@ -495,6 +495,7 @@ do
         Utility.AddFolder("akiri/Assets/UI")
         Utility.AddFolder("akiri/Configs")
         Utility.AddFolder("akiri/Scripts")
+        Window.SetText(0, "UI Initilazitation [ "..identifyexecutor().." ]"
         --
         Library.Theme.Gradient = Utility.AddImage("akiri/Assets/UI/Gradient.png", "https://raw.githubusercontent.com/mvonwalk/Exterium/main/Gradient.png")
         -- Library.Theme.SecondIcon = Utility.AddImage("akiri/Assets/UI/Gradient.png", "https://raw.githubusercontent.com/mvonwalk/Exterium/main/Gradient.png")
@@ -515,8 +516,7 @@ do
         --
         Window.SetText(1, "Checking Assets")
         --
-        Window.SetText(1, "Checking Input")
-        Utility.CLCheck(Window)
+	task.wait(1)
         --
         Window.SetText(2, "Finished")
         --
