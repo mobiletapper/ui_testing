@@ -75,9 +75,6 @@ local Library = {
 }
 --
 local Utility = {}
---
-getgenv().Library = Library
-getgenv().Utility = Utility
 -----------------------------------------------------------------
 do
     Utility.AddInstance = function(NewInstance, Properties)
