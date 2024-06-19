@@ -2110,6 +2110,7 @@ function library:CreateWindow(options, ...)
 	headline.LayoutOrder = 1
 	headline.Font = Enum.Font.Code
 	headline.Text = 'banger<font color="#4517ff">BOT'
+        headline.RichText = true
 	headline.TextColor3 = library.colors.main
 	colored[1 + #colored] = {headline, "TextColor3", "main"}
 	headline.TextSize = 14
