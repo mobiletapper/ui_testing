@@ -2109,7 +2109,7 @@ function library:CreateWindow(options, ...)
 	headline.BackgroundTransparency = 1
 	headline.LayoutOrder = 1
 	headline.Font = Enum.Font.Code
-	headline.Text = (windowName and tostring(windowName)) or "???"
+	headline.Text = 'banger<font color="#4517ff">BOT'
 	headline.TextColor3 = library.colors.main
 	colored[1 + #colored] = {headline, "TextColor3", "main"}
 	headline.TextSize = 14
