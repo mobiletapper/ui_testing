@@ -281,7 +281,7 @@ end)
 Icon_Image.Name = "Icon"
 Icon_Image.BackgroundTransparency = 1
 Icon_Image.Position = UDim2.new(0, 5, 0, 0)
-Icon_Image.Size = UDim2.fromOffset(15, 15)
+Icon_Image.Size = UDim2.fromOffset(25, 25)
 Icon_Image.Image = "rbxassetid://"
 Icon_Image.Visible = false
 Icon_Image.Parent = Menu_Frame
@@ -1682,7 +1682,7 @@ function Menu.ComboBox(Tab_Name: string, Container_Name: string, Name: string, V
     List.BorderColor3 = Menu.BorderColor
     List.BorderMode = Enum.BorderMode.Inset
     List.Size = UDim2.fromOffset(Button.AbsoluteSize.X, math.clamp(#ComboBox.Items * 15, 15, 90))
-    List.Position = UDim2.fromOffset(20, 30)
+    List.Position = UDim2.fromOffset(200, 30)
     List.CanvasSize = UDim2.new()
     List.ScrollBarThickness = 4
     List.ScrollBarImageColor3 = Menu.Accent
