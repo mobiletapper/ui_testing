@@ -5,7 +5,7 @@ local Library = {
 		main = "test";
 		configs = "test/Configs";
 	};
-	Accent = Color3.fromRGB(221, 217, 255);
+	Accent = Color3.fromRGB(255,255,255);
 	Pages = {};
 	Sections = {};
 	Flags = {};
@@ -364,8 +364,7 @@ local Languages = {
 }
 local utx = {} 
 local Messages = {}
-local drawingCache = {}
-
+local drawingCache = {} 
 
 utility.folders["Part Chams"] = Instance.new("Folder", Workspace);
 utility.folders["Hit Chams"] = Instance.new("Folder", Workspace);
@@ -1431,7 +1430,7 @@ Library.Sections.__index = Library.Sections;
 			--
 			Library:Connection(TabButton.MouseEnter, function() 
 				if not Page.Open then
-                                    game:GetService("TweenService"):Create(TabButton, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Library.Accent):Play()
+					TabButton.TextColor3 = Library.Accent
 				end
 			end)
 			--
