@@ -196,7 +196,6 @@ local Library = {
 }
 
 local InputService = game:GetService("UserInputService");
-local TweenService = game:GetService("TweenService")
 local TeleportService = game:GetService("TeleportService");
 local RunService = game:GetService("RunService");
 local Workspace = game:GetService("Workspace");
@@ -208,8 +207,6 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage");
 local TweenService = game:GetService("TweenService");
 local VirtualUser = game:GetService("VirtualUser");
 local PathFindingService = game:GetService("PathfindingService");
-local Tweeninfo = TweenInfo.new(0,6 Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
-
 
 local utility = {
 	Circle = nil, 
@@ -367,7 +364,8 @@ local Languages = {
 }
 local utx = {} 
 local Messages = {}
-local drawingCache = {} 
+local drawingCache = {}
+
 
 utility.folders["Part Chams"] = Instance.new("Folder", Workspace);
 utility.folders["Hit Chams"] = Instance.new("Folder", Workspace);
@@ -1433,8 +1431,7 @@ Library.Sections.__index = Library.Sections;
 			--
 			Library:Connection(TabButton.MouseEnter, function() 
 				if not Page.Open then
-                                        local tweenAnim = TweenService:Create(TabButton, Tweeninfo, {TextColor3 = Library.Accent}) 
-					tweenAnim:Play()
+                                    game:GetService("TweenService"):Create(TabButton, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Library.Accent):Play()
 				end
 			end)
 			--
