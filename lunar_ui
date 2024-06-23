@@ -1184,6 +1184,7 @@ Library.Sections.__index = Library.Sections;
 			local Outline = Instance.new('Frame', ScreenGui)
 			local Inline = Instance.new('Frame', Outline)
 			local Accent = Instance.new('Frame', Inline)
+                        local UIGradient = Instance.new('UIGradient', Accent)
 			local HolderOutline = Instance.new('Frame', Inline)
 			local HolderInline = Instance.new('Frame', HolderOutline)
 			local Tabs = Instance.new('Frame', HolderInline)
@@ -1214,6 +1215,9 @@ Library.Sections.__index = Library.Sections;
 			Accent.BorderSizePixel = 0
 			Accent.BorderColor3 = Color3.new(0,0,0)
 			table.insert(Library.ThemeObjects, Accent)
+                        -- 
+                        UIGradient.Enabled = true
+                        UIGradient.Color = ColorSequence.new(ColorSequence.Keypoint.new(0, Color3.fromRGB(255,255,255)), ColorSequenceKeypoint.new(0.5, 96, 49, 214)))
 			--
 			HolderOutline.Name = "HolderOutline"
 			HolderOutline.Position = UDim2.new(0,7,0,11)
