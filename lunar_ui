@@ -1214,8 +1214,6 @@ Library.Sections.__index = Library.Sections;
 			Accent.BackgroundColor3 = Library.Accent
 			Accent.BorderSizePixel = 0
 			Accent.BorderColor3 = Color3.new(0,0,0)
-			AccentGradient.Enabled = true 
-			AccentGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, 255,255,255), ColorSequenceKeypoint.new(1, 109, 16, 230)}})
 			table.insert(Library.ThemeObjects, Accent)
 			--
 			HolderOutline.Name = "HolderOutline"
