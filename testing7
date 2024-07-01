@@ -2,7 +2,7 @@ setfpscap(120)
 
 
 local Settings = {
-    Accent = Color3.fromHex("#c8b2ff"),
+    Accent = Color3.fromHex("#5c5858"),
     Font = Enum.Font.SourceSans,
     IsBackgroundTransparent = true,
     Rounded = false,
