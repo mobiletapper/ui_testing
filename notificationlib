@@ -1,0 +1,76 @@
+local notifylib = {};
+function notifylib:init()
+
+    notifylib["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+    notifylib["1"]["Name"] = [[fentnotifylib]];
+    notifylib["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+    notifylib["2"] = Instance.new("Frame", notifylib["1"]);
+    notifylib["2"]["BorderSizePixel"] = 0;
+    notifylib["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+    notifylib["2"]["AnchorPoint"] = Vector2.new(0, 1);
+    notifylib["2"]["Size"] = UDim2.new(0, 350, 0, 800);
+    notifylib["2"]["Position"] = UDim2.new(0, 10, 1, -10);
+    notifylib["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+    notifylib["2"]["Name"] = [[Holder]];
+    notifylib["2"]["BackgroundTransparency"] = 1;
+
+    notifylib["3"] = Instance.new("UIListLayout", notifylib["2"]);
+    notifylib["3"]["Padding"] = UDim.new(0, 3);
+    notifylib["3"]["VerticalAlignment"] = Enum.VerticalAlignment.Bottom;
+    notifylib["3"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+    function notifylib:Notify(text, duration)
+        local notifications = {}
+
+            -- StarterGui.fentnotify.Holder.Notification
+            notifications["4"] = Instance.new("Frame", notifications["2"]);
+            notifications["4"]["BorderSizePixel"] = 0;
+            notifications["4"]["BackgroundColor3"] = Color3.fromRGB(18, 18, 18);
+            notifications["4"]["Size"] = UDim2.new(0, 294, 0, 28);
+            notifications["4"]["Position"] = UDim2.new(0, 0, 0.965, 0);
+            notifications["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+            notifications["4"]["Name"] = [[Notification]];
+
+            -- StarterGui.fentnotify.Holder.Notification.UICorner
+            notifications["5"] = Instance.new("UICorner", notifications["4"]);
+
+
+            -- StarterGui.fentnotify.Holder.Notification.liner
+            notifications["6"] = Instance.new("Frame", notifications["4"]);
+            notifications["6"]["BorderSizePixel"] = 0;
+            notifications["6"]["BackgroundColor3"] = Color3.fromRGB(12, 28, 255);
+            notifications["6"]["Size"] = UDim2.new(0.018, 0, 0, 17);
+            notifications["6"]["Position"] = UDim2.new(0.94218, 0, 0.1875, 0);
+            notifications["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+            notifications["6"]["Name"] = [[liner]];
+
+            -- StarterGui.fentnotify.Holder.Notification.liner.UICorner
+            notifications["7"] = Instance.new("UICorner", notifications["6"]);
+
+
+            -- StarterGui.fentnotify.Holder.Notification.text
+            notifications["8"] = Instance.new("TextLabel", notifications["4"]);
+            notifications["8"]["TextStrokeTransparency"] = 0;
+            notifications["8"]["BorderSizePixel"] = 0;
+            notifications["8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+            notifications["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+            notifications["8"]["TextSize"] = 14;
+            notifications["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+            notifications["8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+            notifications["8"]["BackgroundTransparency"] = 1;
+            notifications["8"]["Size"] = UDim2.new(1, 0, 1, 0);
+            notifications["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+            notifications["8"]["Text"] = text;
+            notifications["8"]["Name"] = [[text]];
+
+            -- StarterGui.fentnotify.Holder.Notification.text.UIPadding
+            notifications["9"] = Instance.new("UIPadding", notifications["8"]);
+            notifications["9"]["PaddingLeft"] = UDim.new(0, 7);
+
+            task.wait(duration)
+
+            notifications:Destroy()
+    end
+end
+
