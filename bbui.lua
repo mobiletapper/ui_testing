@@ -2531,7 +2531,7 @@ do
 			Library:Connection(ToggleFrame.MouseButton1Down, function()
 				ContentOutline.Visible = not ContentOutline.Visible
 				if ContentOutline.Visible then
-					NewList.ZIndex = 5
+					NewList.ZIndex = 4791791
 				else
 					NewList.ZIndex = 1
 				end
