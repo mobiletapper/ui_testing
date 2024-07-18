@@ -323,6 +323,7 @@ do
 			ColorOutline.Size = UDim2.new(0, 184, 0, 182)
 			ColorOutline.Visible = false
 			ColorOutline.Parent = Icon
+			ColorOutline.ZIndex = 416861
 
 			local ColorInline = Instance.new("Frame")
 			ColorInline.Name = "ColorInline"
@@ -331,6 +332,7 @@ do
 			ColorInline.BorderSizePixel = 0
 			ColorInline.Position = UDim2.new(0, 2, 0, 2)
 			ColorInline.Size = UDim2.new(1, -4, 1, -4)
+			ColorInline.ZIndex = 416861
 
 			local Accent = Library:NewInstance("Frame", true)
 			Accent.Name = "Accent"
