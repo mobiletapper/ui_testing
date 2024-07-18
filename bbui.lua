@@ -1224,14 +1224,14 @@ do
 				if not Library.Cooldown then
 					Page.Open = bool
 					UIGradient.Enabled = Page.Open and true or false
-					TweenService:Create(Frame, TweenInfo.new(0.25,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut), {BackgroundColor3 = Page.Open and Color3.new(30,30,30) or Color3.fromRGB(30,30,30)})
+					Frame.BackgroundColor3 = Page.Open and Color3.new(1,1,1) or Color3.fromRGB(30,30,30)
 					--
 					task.spawn(function()
 						Page.Window.Elements.FadeThing.Visible = true
-						TweenService:Create(Page.Window.Elements.FadeThing, TweenInfo.new(0.25,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut), {BackgroundTransparency = 0}):Play()
+						TweenService:Create(Page.Window.Elements.FadeThing, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out), {BackgroundTransparency = 0}):Play()
 						task.wait(0.1)
 						RealPage.Visible = Page.Open
-						TweenService:Create(Page.Window.Elements.FadeThing, TweenInfo.new(0.25,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut), {BackgroundTransparency = 1}):Play()
+						TweenService:Create(Page.Window.Elements.FadeThing, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
 						task.wait(0.1)
 						Page.Window.Elements.FadeThing.Visible = false
 					end)
