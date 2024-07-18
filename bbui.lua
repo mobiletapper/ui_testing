@@ -2597,7 +2597,7 @@ do
 						Value.Text = option
 						text.Visible = true
 						ContentOutline.Visible = false
-						NewList.ZIndex = 1
+						NewList.ZIndex = 7418471
 						Library.Flags[Dropdown.Flag] = option
 						Dropdown.Callback(option)
 					end
