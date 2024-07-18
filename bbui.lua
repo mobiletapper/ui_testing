@@ -330,7 +330,7 @@ do
 			ColorInline.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 			ColorInline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			ColorInline.BorderSizePixel = 0
-			ColorInline.Position = UDim2.new(0, -150, 0, 2)
+			ColorInline.Position = UDim2.new(0, -176, 0, 2)
 			ColorInline.Size = UDim2.new(1, -4, 1, -4)
 			ColorInline.ZIndex = 416861
 
