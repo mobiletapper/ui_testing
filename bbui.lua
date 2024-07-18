@@ -899,6 +899,7 @@ do
 			Title.Name = "Title"
 			Title.FontFace = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 			Title.Text = Window.Name
+			Title.RichText = true
 			Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Title.TextSize = Library.FSize
 			Title.TextStrokeTransparency = 0
