@@ -2471,6 +2471,7 @@ do
 			Value.Position = UDim2.new(0, 4, 0, 0)
 			Value.Size = UDim2.new(1, 0, 1, 0)
 			Value.Parent = ToggleFrame
+			Value.TextTruncate = Enum.TextTruncate.AtEnd
 
 			local ContentOutline = Instance.new("ScrollingFrame")
 			ContentOutline.Name = "ContentOutline"
