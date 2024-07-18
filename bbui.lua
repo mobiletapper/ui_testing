@@ -371,7 +371,7 @@ do
 			TextButton.Name = "TextButton"
 			TextButton.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
 			TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			TextButton.Position = UDim2.new(0, -22, 0, 22)
+			TextButton.Position = UDim2.new(0, 6, 0, 22)
 			TextButton.Size = UDim2.new(0, 150, 0, 150)
 
 			local UIStroke = Instance.new("UIStroke")
