@@ -1,4 +1,4 @@
-
+local players, run_service, tween_service, workspace, http_service, gui_service, uis, current_list = game:GetService("Players"), game:GetService("RunService"), game:GetService("TweenService"), game:GetService("Workspace"), game:GetService("HttpService"), game:GetService("GuiService"), game:GetService("UserInputService"), {}
 local fonts = {
     { ttf = "Proggy.ttf", json = "Proggy.json", url = "https://raw.githubusercontent.com/OxygenClub/Random-LUAS/main/Proggy.txt", name = "Proggy" },
     { ttf = "Minecraftia.ttf", json = "Minecraftia.json", url = "https://raw.githubusercontent.com/OxygenClub/Random-LUAS/main/Minecraftia.txt", name = "Minecraftia" },
