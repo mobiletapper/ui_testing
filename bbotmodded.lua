@@ -129,38 +129,22 @@ local Pickers = {}; -- Ignore
 local VisValues = {} -- Ignore
 local flags = Library.Flags
 
-local VisualHolder = Instance.new("ScreenGui",game.CoreGui)
-VisualHolder.Name = tostring(math.random(-3000,3000))
-VisualHolder.ResetOnSpawn = false
-VisualHolder.IgnoreGuiInset = true
-
 Library.__index = Library
 Library.Pages.__index = Library.Pages
 Library.Sections.__index = Library.Sections
 
-local VisualHolder = Instance.new("ScreenGui",game.CoreGui)
-VisualHolder.Name = tostring(math.random(-3000,3000))
-VisualHolder.ResetOnSpawn = false
-local EspHolder = Instance.new("Folder",VisualHolder)
-EspHolder.Name = "EspHolder"
-
-if not isfolder("camelhook/utilities") then
-	makefolder("camelhook/utilities")
-end
-
-if not isfolder("camelhook/Configs") then 
-	makefolder("camelhook/Configs")
-end
 
 	-- // Misc Functions
 	do
 		function Library:Connection(Signal, Callback)
 			local Con = Signal:Connect(Callback)
+		table.insert(Library.Connections, Con)
 			return Con
 		end
 		--
 		function Library:Disconnect(Connection)
 			Connection:Disconnect()
+		table.remove(Library.Connections, Connection)
 		end
 		--
 		function Library:Round(Number, Float)
@@ -4261,5 +4245,15 @@ end
 			Playerlist.Page.Elements.Right.Position = UDim2.new(0.5, 5,0.5, 75)
 	end
 end;
+
+function Library:Unload()
+	if Library.Holder then
+		Library.Holder:Destroy()
+	end
+
+    for _, connection in pairs(Library.Connections) do
+        connection:Disconnect()
+    end
+end
 
 return Library
