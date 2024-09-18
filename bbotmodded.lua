@@ -4246,14 +4246,4 @@ Library.Sections.__index = Library.Sections
 	end
 end;
 
-function Library:Unload()
-	if Library.Holder then
-		Library.Holder:Destroy()
-	end
-
-    for _, connection in pairs(Library.Connections) do
-        connection:Disconnect()
-    end
-end
-
 return Library
