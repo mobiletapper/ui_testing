@@ -144,7 +144,6 @@ Library.Sections.__index = Library.Sections
 		--
 		function Library:Disconnect(Connection)
 			Connection:Disconnect()
-		table.remove(Library.Connections, Connection)
 		end
 		--
 		function Library:Round(Number, Float)
