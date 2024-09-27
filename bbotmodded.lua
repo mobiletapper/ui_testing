@@ -115,10 +115,6 @@ local Library = {
 		Notifs = {};
 		Friends = {};
 		Priorities = {};
-		Folders = {
-			"camelhook",
-			"camelhook/configs"
-		},
 		RainbowSpeed = 0.1
 	}
 
