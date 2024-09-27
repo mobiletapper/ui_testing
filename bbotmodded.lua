@@ -590,10 +590,10 @@ Library.Sections.__index = Library.Sections
 				Square.Position = UDim2.new(math.clamp(1 - sat, 0.000, 1 - 0.030), 0, math.clamp(1 - val, 0.000, 1 - 0.030), 0)
 
 				if flag then
-					Library.Flags[flag] = Library:RGBA(hsv.r * 255, hsv.g * 255, hsv.b * 255, alpha)
+					Library.Flags[flag] = hsv
 				end
 
-				callback(Library:RGBA(hsv.r * 255, hsv.g * 255, hsv.b * 255, alpha))
+				callback(hsv)
 			end
 
 			local function set(color, a)
@@ -621,10 +621,10 @@ Library.Sections.__index = Library.Sections
 					Square.Position = UDim2.new(math.clamp(1 - sat, 0.000, 1 - 0.030), 0, math.clamp(1 - val, 0.000, 1 - 0.030), 0)
 
 					if flag then
-						Library.Flags[flag] = Library:RGBA(hsv.r * 255, hsv.g * 255, hsv.b * 255, alpha)
+						Library.Flags[flag] = hsv
 					end
 
-					callback(Library:RGBA(hsv.r * 255, hsv.g * 255, hsv.b * 255, alpha))
+					callback(hsv)
 				end
 			end
 
