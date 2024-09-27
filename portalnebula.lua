@@ -3144,7 +3144,7 @@ do -- Library
 				Textbox.Callback(str)
 			end
 
-			
+			set(Textbox.State)
 			Flags[Textbox.Flag] = set
 			return Textbox
 		end
