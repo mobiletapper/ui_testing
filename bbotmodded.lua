@@ -2483,34 +2483,39 @@ end)
 			end
 			--
 			Library:Connection(ToggleFrame.InputBegan, function(input)
-				if input.UserInputType == Enum.UserInputType.MouseButton1 then
-					Sliding = true
-					ISlide(input)
-				end
-			end)
-			Library:Connection(ToggleFrame.InputEnded, function(input)
-				if input.UserInputType == Enum.UserInputType.MouseButton1 then
-					Sliding = false
-				end
-			end)
-			Library:Connection(ToggleAccent.InputBegan, function(input)
-				if input.UserInputType == Enum.UserInputType.MouseButton1 then
-					Sliding = true
-					ISlide(input)
-				end
-			end)
-			Library:Connection(ToggleAccent.InputEnded, function(input)
-				if input.UserInputType == Enum.UserInputType.MouseButton1 then
-					Sliding = false
-				end
-			end)
-			Library:Connection(game:GetService("UserInputService").InputChanged, function(input)
-				if input.UserInputType == Enum.UserInputType.MouseMovement then
-					if Sliding then
-						ISlide(input)
-					end
-				end
-			end)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        Sliding = true
+        ISlide(input)
+    end
+end)
+
+Library:Connection(ToggleFrame.InputEnded, function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        Sliding = false
+    end
+end)
+
+Library:Connection(ToggleAccent.InputBegan, function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        Sliding = true
+        ISlide(input)
+    end
+end)
+
+Library:Connection(ToggleAccent.InputEnded, function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        Sliding = false
+    end
+end)
+
+Library:Connection(game:GetService("UserInputService").InputChanged, function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        if Sliding then
+            ISlide(input)
+        end
+    end
+end)
+
 			--
 			function Slider:Set(Value)
 				Set(Value)
