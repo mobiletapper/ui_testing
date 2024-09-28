@@ -2681,21 +2681,23 @@ end)
 
 			-- // Connections
 			Library:Connection(ToggleFrame.MouseButton1Down, function()
-				ContentOutline.Visible = not ContentOutline.Visible
-				if ContentOutline.Visible then
-					NewList.ZIndex = 5
-				else
-					NewList.ZIndex = 1
-				end
-			end)
-			Library:Connection(game:GetService("UserInputService").InputBegan, function(Input)
-				if ContentOutline.Visible and Input.UserInputType == Enum.UserInputType.MouseButton1 then
-					if not Library:IsMouseOverFrame(ContentOutline) and not Library:IsMouseOverFrame(ToggleFrame) then
-						ContentOutline.Visible = false
-						NewList.ZIndex = 1
-					end
-				end
-			end)
+	ContentOutline.Visible = not ContentOutline.Visible
+	if ContentOutline.Visible then
+		NewList.ZIndex = 5
+	else
+		NewList.ZIndex = 1
+	end
+end)
+
+Library:Connection(game:GetService("UserInputService").InputBegan, function(Input)
+	if ContentOutline.Visible and (Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch) then
+		if not Library:IsMouseOverFrame(ContentOutline) and not Library:IsMouseOverFrame(ToggleFrame) then
+			ContentOutline.Visible = false
+			NewList.ZIndex = 1
+		end
+	end
+end)
+
 			--
 			local chosen = Dropdown.Max and {} or nil
 			local Count = 0
