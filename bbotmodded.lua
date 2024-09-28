@@ -49,7 +49,7 @@ end
 
 local Library = {
 		Open = true;
-		Accent = Color3.fromRGB(125, 154, 197);
+		Accent = Color3.fromRGB(34, 139, 34);
 		Pages = {};
 		Sections = {};
 		Flags = {};
@@ -321,7 +321,7 @@ Library.Sections.__index = Library.Sections
 			return "Console"
 		elseif (uis.TouchEnabled and not uis.MouseEnabled) then
 			local DeviceSize = workspace.CurrentCamera.ViewportSize
-			if (DeviceSize.Y >= 600) then
+			if (DeviceSize.Y >= 400) then
 				return "Tablet"
 			else
 				return "Phone"
