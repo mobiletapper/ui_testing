@@ -49,7 +49,7 @@ end
 
 local Library = {
 		Open = true;
-		Accent = Color3.fromRGB(125, 154, 197);
+		Accent = Color3.fromRGB(34, 139, 34);
 		Pages = {};
 		Sections = {};
 		Flags = {};
