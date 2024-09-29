@@ -106,7 +106,7 @@ local Library = {
 			[Enum.UserInputType.MouseButton3] = "mouse3"
 		};
 		Connections = {};
-		UIKey = Enum.KeyCode.RightControl;
+		UIKey = Enum.KeyCode.rcontrol;
 		ScreenGUI = nil;
 		FSize = 12;
 		SettingsPage = nil;
