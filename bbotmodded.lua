@@ -31,7 +31,7 @@ for _, font in fonts do
 
 
 end
-print("wayponint two")
+print("nau")
 
 local DrawingFontsEnum = {
     [0] = Font.new(getcustomasset("Verdana.json"), Enum.FontWeight.Regular),
@@ -106,7 +106,7 @@ local Library = {
 			[Enum.UserInputType.MouseButton3] = "mouse3"
 		};
 		Connections = {};
-		UIKey = Enum.KeyCode.End;
+		UIKey = Enum.KeyCode.RightControl;
 		ScreenGUI = nil;
 		FSize = 12;
 		SettingsPage = nil;
